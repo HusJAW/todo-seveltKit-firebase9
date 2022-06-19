@@ -28,7 +28,6 @@
 		<button type="submit" />
 	</form>
 	<br />
-
 	{#each todoList as item}
 		<div>
 			<label for={item.id} class="cursor-pointer">
