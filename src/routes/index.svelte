@@ -1,6 +1,4 @@
 <script>
-	import Index from './index.svelte';
-
 	const createID = () => `_${Math.random().toString().substring(2, 35)}`;
 	let newTodo = '';
 	let todoList = [{ text: 'Write my first post', id: 'aaa', status: false }];
