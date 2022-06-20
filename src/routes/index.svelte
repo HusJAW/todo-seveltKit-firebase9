@@ -1,12 +1,16 @@
 <script>
+	import Index from './index.svelte';
+
+	const createID = () => `_${Math.random().toString().substring(2, 35)}`;
 	let newTodo = '';
 	let todoList = [{ text: 'Write my first post', id: 'aaa', status: false }];
 
-	let id = 0;
 	const addTodoList = () => {
-		todoList = [...todoList, { text: newTodo, id: 'a' + id, status: false }];
-		id++;
+		todoList = [...todoList, { text: newTodo, id: createID(), status: false }];
 		newTodo = '';
+	};
+	const removeFromList = (id) => {
+		todoList = todoList.filter((x) => x.id !== id);
 	};
 </script>
 
@@ -35,6 +39,7 @@
 				>
 				<input class="hidden" id={item.id} type="checkbox" bind:checked={item.status} />
 			</label>
+			<span class="cursor-pointer" on:click={() => removeFromList(item.id)}>❌</span>
 		</div>
 	{/each}
 </main>
