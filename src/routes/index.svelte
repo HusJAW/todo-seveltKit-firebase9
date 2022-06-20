@@ -18,7 +18,6 @@
 		Visit <a class="text-blue-400 underline" href="https://kit.svelte.dev">kit.svelte.dev</a> to read
 		the documentation
 	</p>
-
 	<h2 class="m-5">simple TODO</h2>
 	<form on:submit|preventDefault={addTodoList}>
 		<input
