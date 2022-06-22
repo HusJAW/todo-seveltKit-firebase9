@@ -26,7 +26,6 @@
 			placeholder="New TODO"
 			bind:value={newTodo}
 		/>
-		<button type="submit" />
 	</form>
 	<br />
 	{#each todoList as item}
